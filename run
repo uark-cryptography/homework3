@@ -1,0 +1,2 @@
+javac Cryptography.java
+java Cryptography
