@@ -121,12 +121,12 @@ public class Cryptography {
             new Hashtable<BigInteger, BigInteger>();
 
         for (
-            BigInteger i = BigInteger.ZERO, gPower = BigInteger.ONE;
+            BigInteger i = BigInteger.ZERO, key = BigInteger.ONE;
             i.compareTo(n) == -1;
             i = i.add(BigInteger.ONE),
-            gPower = gPower.multiply(g).mod(N)
+            key = key.multiply(g).mod(N)
         ) {
-            table.put(gPower, i);
+            table.put(key, i);
         }
 
         BigInteger u = g.modPow(n,N).modInverse(N);
